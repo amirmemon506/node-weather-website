@@ -3,6 +3,10 @@ const Location = document.querySelector("input")
 const messageOne = document.querySelector("#message-1")
 const messageTwo = document.querySelector("#message-2")
 
+messageOne.textContent = "Loading..."
+messageTwo.textContent = ""
+
+
 WeatherInfo.addEventListener('submit' ,(e) =>  {
     e.preventDefault()
     const location = Location.value
@@ -10,10 +14,10 @@ WeatherInfo.addEventListener('submit' ,(e) =>  {
     response.json().then((data) => {
         if (data.error) {
             messageOne.textContent = data.error
-            messageTwo.textContent = ""
+            
         } else {
 
-            messageOne.textContent = "Loading..."
+            
             messageOne.textContent = "Location is " + data.Location
             messageTwo.textContent = ("Temperature is " + data.Temperature +  " degrees. It feels like it is " + data.FeelsLike + " degrees. It is " + data.Condition)  
             
