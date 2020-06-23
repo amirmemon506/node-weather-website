@@ -21,7 +21,7 @@ WeatherInfo.addEventListener('submit' ,(e) =>  {
 
             
             messageOne.textContent = "Location is " + data.Location
-            messageTwo.textContent = ("Temperature is " + data.Temperature +  " degrees. It feels like it is " + data.FeelsLike + " degrees. It is " + data.Condition)  
+            messageTwo.textContent = ("Temperature is " + data.Temperature +  " degrees. It feels like it is " + data.FeelsLike + " degrees. It is " + data.Condition + ". Humidity is " + data.Humidity + "%.")  
             
             
             
